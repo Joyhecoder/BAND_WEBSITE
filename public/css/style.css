@@ -1,0 +1,22 @@
+
+
+body, html {
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+    height: 100%;
+    
+    
+    
+    
+   
+}
+
+.background-img {
+
+    background-image: url(../image/groupPic/blackpink_the_album.webp);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
