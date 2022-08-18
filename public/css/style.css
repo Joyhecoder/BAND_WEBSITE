@@ -3,13 +3,11 @@
 body, html {
     margin: 0;
     padding:0;
-    font-size: 16px;
+    font-size: 25px;
     height: 100%;
     
     
-    
-    
-   
+  
 }
 
 .background-img {
@@ -19,4 +17,29 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* styles for navbar */
+.nav-link{
+    color: black;
+
+}
+
+
+/* styls for singer introduction */
+.spaceholder{
+    height: 30%;
+}
+.singer-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.singerPic{
+    border-radius: 50%;
+    width: 350px;
+    height:350px;
+    overflow: hidden;
+    
 }
