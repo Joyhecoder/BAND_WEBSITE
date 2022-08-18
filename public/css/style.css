@@ -11,7 +11,6 @@ body, html {
 }
 
 .background-img {
-
     background-image: url(../image/groupPic/blackpink_the_album.webp);
     height: 100%;
     background-position: center;
@@ -19,14 +18,23 @@ body, html {
     background-size: cover;
 }
 
+.background-img-albumpage{
+    background-image: url(../image/groupPic/blackpink-logo.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 /* styles for navbar */
 .nav-link{
     color: black;
+    font-size: 50px;
 
 }
 
 
-/* styls for singer introduction */
+/* styles for singer introduction */
 .spaceholder{
     height: 30%;
 }
@@ -42,4 +50,18 @@ body, html {
     height:350px;
     overflow: hidden;
     
+}
+
+
+
+/* styles for album page */
+.album-card-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+
+}
+
+.album-card{
+    margin-top: 25px;
 }
