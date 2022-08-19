@@ -31,14 +31,25 @@ body, html {
     background-size: 100% 100%;
     background-attachment: fixed;
     transform:rotateY(30deg);
-  
-    
+   
+}
+
+.background-img-chatpage{
+    background-image: url(../image/groupPic/crown.jpeg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:fixed;
+    min-width: 100%;
+    min-height: 100%;
+   
 }
 
 /* styles for navbar */
 .nav-link{
     color: black;
-    font-size: 50px;
+    font-size: 35px;
 
 }
 
@@ -61,7 +72,7 @@ body, html {
     height: 30vh;
     overflow: hidden;
     object-fit: cover;
-    
+    border: solid white 1px;
     
 }
 
@@ -107,4 +118,31 @@ body, html {
     width: 100px;
     height: 100px;
     
+}
+
+
+
+/* styles for chat page */
+
+.chat-display-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    height: 100vh;
+}
+
+.chat-container{
+    width: 40vw;
+}
+
+.display-container{
+    width: 40vw;
+    
+}
+
+.feedback-messages{
+    /* border: solid 5px white; */
+    height: 70vh;
+    background-color: white;
+    border-radius: 10%;
 }
