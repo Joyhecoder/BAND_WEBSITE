@@ -14,15 +14,15 @@
 </head>
 <body>
     
-    <div class="background-img-albumpage">
+    <div class="background-img-albumpage"> </div>
 
         <!-- this is the navbar -->
         <ul class="nav justify-content-center">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="http://localhost:3000">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Albums</a>
+            <a class="nav-link" href="http://localhost:3000/albums">Albums</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#">Chat</a>
@@ -39,16 +39,17 @@
                     <img src="/image/album/<%= artwork[index] %>  " class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title"><%= albumname[index] %> </h5>
-                      <a href="# " class="btn btn-primary">More Details</a>
+                      
+                      <a href="http://localhost:3000/albums/<%= shortname[index] %> " target="_blank" class="btn btn-primary">More Details</a> 
                     </div>
                   </div>
 
             <% } %>
 
-           
+         
 
         </div>
 
-      </div>
+      <!-- </div> -->
 </body>
 </html>
