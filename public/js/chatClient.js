@@ -20,6 +20,13 @@ chatForm.addEventListener('click', async (e)=>{
     let message = await results.json();
     updateChat(message);
 
+
+    //clear input field after clicking
+    const inputs = document.querySelectorAll('.form-control, .form-label');
+    inputs.forEach(input =>{
+        input.value = '';
+    })
+
 })
 
 
