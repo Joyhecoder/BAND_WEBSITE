@@ -1,66 +1,55 @@
-let chatForm = document.querySelector('button')
-chatForm.addEventListener('click', async (e)=>{
-    //to prevent the page reload
-    e.preventDefault();
-    console.log(e);
 
-    //make fetch call to store info into an obj
-    let newMessage = {
-        name: document.querySelector('#chat-form-name').value,
-        message: document.querySelector('#chat-form-message').value
+let socket = io(); //access to web socket api
+
+let chatUsername= document.getElementById('chat-username');
+let chatMessage= document.getElementById('chat-message');
+let chatForm = document.querySelector('form');
+let chatDisplay= document.querySelector('.chat-display');
+let chatButton = document.querySelector('#chat-submit');
+
+
+//listen to incoming messages fromm the server
+//{username:...., message:...}
+socket.on('updateMessage', data =>{
+    console.log(data);
+    //create a p tag 
+    let newMessage= document.createElement('p')
+    //style the p tag
+    if(chatUsername.value === data.username){
+        newMessage.className= "bg-dark chat-text"
+    }
+    else{
+        newMessage.className= "bg-light text-warning chat-text"
     }
 
-    //make api call to add a new message
-    let results= await fetch('/api', {
-        method: "POST",
-        headers: {'Content-type': 'application/json; charset=UTF-8'},
-        body: JSON.stringify(newMessage)
-    })
+    //set the innerHTML for the p tag
+    newMessage.innerHTML = `<strong>${data.username}</strong>: ${data.message}`
+   
 
-    let message = await results.json();
-    updateChat(message);
+    //append to the top of all message in chatDisplay
+    chatDisplay.insertBefore(newMessage, chatDisplay.firstChild) //appends to the beginning of all the messages
 
-
-    //clear input field after clicking
-    const inputs = document.querySelectorAll('.form-control, .form-label');
-    inputs.forEach(input =>{
-        input.value = '';
-    })
+ 
 
 })
 
 
-const displayMessages = async () => {
-    let result = await fetch('/api');
-    let messages = await result.json();
-
-    updateChat(messages)
-    
-}
-
-
-
-const updateChat = (messagesArr) => {
-    let htmlBlock = "";
-    messagesArr.forEach((item, index)=>{
-
-        htmlBlock += '     <div class="feedback-item item-list media-list">';
-        htmlBlock += '       <div class="feedback-item media">';
-        // htmlBlock += '       <div class="media-left"><button class="feedback-delete btn btn-xs btn-danger"><span id="' + index + '" class="glyphicon glyphicon-remove"></span></button></div>';
-        htmlBlock += '         <div class="feedback-info media-body">';
-        htmlBlock += '           <div class="feedback-head">';
-        htmlBlock += '             <div class="feedback-title"> <small class="feedback-name label label-info">' + item.name + '</small></div>';
-        htmlBlock += '           </div>';
-        htmlBlock += '           <div class="feedback-message">' + item.message + '</div>';
-        htmlBlock += '         </div>'; 
-        htmlBlock += '       </div>';
-        htmlBlock += '     </div>';
+//emit a message to the server
+chatForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    console.log(e);
+    //send message to the server
+    socket.emit('postMessage', {
+        username: chatUsername.value,
+        message:chatMessage.value,
+        
     })
-
-    //attach to a dom element
-    let chatMessages = document.querySelector('.feedback-messages');
-    chatMessages.innerHTML = htmlBlock;
+   
     
-}
+})
 
-displayMessages()
+
+
+
+
+//on is an event listener it listen for the server event
