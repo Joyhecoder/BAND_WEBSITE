@@ -4,63 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/css/style.css">
+
+
+    
 </head>
 <body>
-    <div class="background-img"> 
 
-        <!-- this is the navbar -->
-        <ul class="nav justify-content-center" >
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost:3000" style="color: white">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="http://localhost:3000/albums" style="color: white">Albums</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="http://localhost:3000/chat" style="color: white">Feedback</a>
-            </li>
-        </ul>
+    <div class="background-img-chatpage"> </div>
+    
+    <!-- this is the navbar -->
+    <ul class="nav justify-content-center" >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://localhost:3000" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/albums">Albums</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/feedback">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/chat">Chat</a>
+          </li>
+      </ul>
+  
 
 
-        <!-- chat and display container -->
-        <div class="chat-display-container">
+    <!-- chat container -->
+    <div class="chat-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <article class="chat">
+                    <header class="chat-header">
+                        <div class="h3 chat-title">Blink Chat</div>
+                    </header>
 
-            <!-- this is the chat div -->
-            <div class="chat-container">
-                <div class="mb-2">
-                    <label for="exampleFormControlInput1" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="chat-form-name" placeholder="enter your name">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
-                    <textarea class="form-control" id="chat-form-message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-default pull-right" style="background-color: white
-                ">Submit</button>
-            </div>
-
-            <!-- this is the display div -->
-            <div class="display-container">
-                <!-- <aside class="col-sm-8"> -->
-                    <!-- <div class="maincontent feedback"> -->
-                        <h2 class="article-title" style="color:white">Recent Feedback</h2>
-                        <div class="feedback-messages" style="color:rgb(225, 147, 160); padding: 25px">
-                                <!-- chat goes here -->
+                    <form name="chatForm" class="form-horizontal chat-form">
+                        <div class="form-group">
+                            <label for="chat-username" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="chat-username" required placeholder="Please enter your name">
+                            </div>
                         </div>
-                    <!-- </div> -->
-                <!-- </aside> -->
-            </div>
 
+                        <div class="form-group">
+                            <label for="chat-message" class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Enter a message" class="form-control" id="chat-message" rows="2" autocomplete="off" required>
+                                    <span class="inpurt-group-btn">
+                                        <button id="chat-submit" class="btn btn-info" type="submit" style="background-color: pink; border: none;">Chat</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="panel panel-default">
+                        <div class="panel-body chat-display">
+                            <p class="text-muted chat-text">Welcome to the Blink Chat Room! Leave your message by using the form above</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
 
-    <script src="/js/chatClient.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <!-- <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+
+    <script src="/js/chatClient.js"></script> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

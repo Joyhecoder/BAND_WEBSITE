@@ -40,7 +40,7 @@ router.get('/albums', (req, res) => {
     
 })
 
-//!move this to a new js and work on the new ejs
+
 //local:3000/albums/shortname
 //speakerID = shortname
 router.get('/albums/:speakerID', (req, res)=>{
