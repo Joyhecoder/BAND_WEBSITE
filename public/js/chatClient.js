@@ -16,7 +16,7 @@ socket.on('updateMessage', data =>{
     let newMessage= document.createElement('p')
     //style the p tag
     if(chatUsername.value === data.username){
-        newMessage.className= "bg-dark chat-text"
+        newMessage.className= "bg-success chat-text"
     }
     else{
         newMessage.className= "bg-light text-warning chat-text"
@@ -28,6 +28,9 @@ socket.on('updateMessage', data =>{
 
     //append to the top of all message in chatDisplay
     chatDisplay.insertBefore(newMessage, chatDisplay.firstChild) //appends to the beginning of all the messages
+
+    //to clear the message bar once submit the message
+    chatMessage.value= ""
 
  
 
