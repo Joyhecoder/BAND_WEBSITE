@@ -53,6 +53,7 @@ router.get('/albums/:speakerID', (req, res)=>{
     let albumAM = [];
     let albumSM = [];
     let albumCover= [];
+    let video=[];
     // let shortname=[];
     albumInfo.forEach(albumObj =>{
         if(albumObj.shortname == shortName){
@@ -62,6 +63,7 @@ router.get('/albums/:speakerID', (req, res)=>{
             albumAM.push(albumObj.albumAM)
             albumSM.push(albumObj.albumSM)
             albumCover.push(albumObj.artwork)
+            video.push(albumObj.video)
             // shortname.push(albumObj.shortname)
         }
        
@@ -76,6 +78,7 @@ router.get('/albums/:speakerID', (req, res)=>{
         albumSM: albumSM,
         album: album,
         albumCover: albumCover,
+        video: video
         // shortname: shortname
 
         
