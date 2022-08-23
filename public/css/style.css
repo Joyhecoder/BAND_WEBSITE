@@ -138,11 +138,24 @@ body, html {
 .cover-tracklist{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 990px){
+    .album-Pic{
+        max-width: 50vw;
+        max-height: 50vw;
+    }
+    iframe{
+        height: 350px;
+    }
+    
 }
 
 .tracklist{
     text-align: center;
     vertical-align:center;
+    display: flex;
 
     
 }
@@ -183,7 +196,7 @@ body, html {
     /* border: solid 5px white; */
     height: 70vh;
     background-color: white;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 @media only screen and (max-height: 1000px){

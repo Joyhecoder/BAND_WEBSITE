@@ -34,22 +34,23 @@
     <div class="cover-tracklist">
 
         <div>
-            <img src="/image/album/<%= albumCover %> " alt="">
+            <img class="album-Pic" src="/image/album/<%= albumCover %> " alt="">
         </div>
 
         <div class="tracklist">
-            <h3>Tracklist</h3>
+            <!-- <h3>Tracklist</h3>
             <% for( let i = 0; i < tracklist.length; i++ ) { %>
                 <%= tracklist[i] %> 
                 <br>
-            <% } %>
+            <% } %> -->
 
-            <a href=" <%= albumAM %> " target="_blank">
-                <img src="/image/groupPic/applemusic.webp" class="music-icon" alt="">
+            <!-- <a href=" <%= albumAM %> " target="_blank">
+                <img src="/image/groupPic/applemusic.webp" class="music-icon" alt=""> -->
             </a>
-            <a href=" <%= albumSM %> " target="_blank">
-                <img src="/image/groupPic/Spotify.png" class="music-icon" alt="">
-            </a>
+            <!-- <a href=" <%= albumSM %> " target="_blank">
+                <img src="/image/groupPic/Spotify2.png" class="music-icon" alt="">
+            </a> -->
+            <iframe style="border-radius:12px" src="<%= video %>" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
            
            
            

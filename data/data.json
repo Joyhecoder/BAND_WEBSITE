@@ -7,7 +7,8 @@
         "artwork": ["Square_One_Cover.jpeg"],
         "tracklist": ["1. Whistle", "2. Boombayah"],
         "albumAM": "https://music.apple.com/us/album/square-one-single/1315917456",
-        "albumSM": "https://open.spotify.com/album/0FOOodYRlj7gzh7q7IjmNZ"
+        "albumSM": "https://open.spotify.com/album/0FOOodYRlj7gzh7q7IjmNZ",
+        "video": "https://open.spotify.com/embed/album/0FOOodYRlj7gzh7q7IjmNZ?utm_source=generator"
     },{
         "name": "Blackpink",
         "shortname": "square_two",
@@ -16,7 +17,8 @@
         "artwork": ["Square_Two_cover.jpeg"],
         "tracklist": ["1. Playing With Fire", "2. Stay", "3. Whistle(Acoustic Version)"],
         "albumAM": "https://music.apple.com/us/album/square-two-ep/1313151079",
-        "albumSM": "https://open.spotify.com/album/2Fna4Tb7fme5aHsNMJtVtp"
+        "albumSM": "https://open.spotify.com/album/2Fna4Tb7fme5aHsNMJtVtp",
+        "video": "https://open.spotify.com/embed/album/2Fna4Tb7fme5aHsNMJtVtp?utm_source=generator"
     },{
         "name": "Blackpink",
         "shortname": "blackpink",
@@ -25,7 +27,8 @@
         "artwork" : ["BLACKPINK_JAPANESE_Cover.jpeg"],
         "tracklist": ["1. Boombayah(Japanese Version)", "2. Whistle(japanese Version)", "3. Playing With Fire(Japanese Version)", "4. Stay(japanese Version)", "5. As If It's Your Last(japanese Version)", "6. Whistle(Acoustic japanese Version)"],
         "albumAM": "https://music.apple.com/us/album/blackpink-ep/1263315668",
-        "albumSM": "https://open.spotify.com/album/6vl7a0PooHBuDRLrtNeUL0"
+        "albumSM": "https://open.spotify.com/album/6vl7a0PooHBuDRLrtNeUL0",
+        "video": "https://open.spotify.com/embed/album/6vl7a0PooHBuDRLrtNeUL0?utm_source=generator"
     },{
         "name": "Blackpink",
         "shortname": "square_up",
@@ -34,7 +37,9 @@
         "artwork" : ["Blackpink-square-up-.jpeg"],
         "tracklist": ["1. DDU-DU DDU-DU", "2. Forever Young", "3. Really", "4. See U Later"],
         "albumAM": "https://music.apple.com/us/album/square-up-ep/1551479990",
-        "albumSM": "https://open.spotify.com/album/0wOiWrujRbxlKEGWRQpKYc"
+        "albumSM": "https://open.spotify.com/album/0wOiWrujRbxlKEGWRQpKYc",
+        "video": "https://open.spotify.com/embed/album/0wOiWrujRbxlKEGWRQpKYc?utm_source=generator"
+
     },{
         "name": "Blackpink",
         "shortname": "kill_this_love",
@@ -43,7 +48,9 @@
         "artwork" : ["Kill_This_Love_.jpeg"],
         "tracklist": ["1. Kill This Love", "2. Don't Know What To Do", "3. Kick It", "4. Hope Not", "5. DDU-DU DDU-DU(Remix)"],
         "albumAM": "https://music.apple.com/us/album/kill-this-love-ep/1551479989",
-        "albumSM": "https://open.spotify.com/album/3PNxZ3BELbUXJ1XLktXiHz"
+        "albumSM": "https://open.spotify.com/album/3PNxZ3BELbUXJ1XLktXiHz",
+        "video": "https://open.spotify.com/embed/album/3PNxZ3BELbUXJ1XLktXiHz?utm_source=generator"
+
     },{
         "name": "Blackpink",
         "shortname": "the_album",
@@ -52,6 +59,8 @@
         "artwork" : ["THE-ALBUM.jpeg"],
         "tracklist": ["1. How You Like That", "2. Ice Cream(with Selena Gomez)", "3. Pretty Savage", "4. Bet You Wanna(feat. Cardi B)", "5. Lovesick Girls", "6. Crazy Over You", "7. Love To Hate Me", "8. You Never Know"],
         "albumAM": "https://music.apple.com/us/album/the-album/1533894050",
-        "albumSM": "https://open.spotify.com/album/71O60S5gIJSIAhdnrDIh3N"
+        "albumSM": "https://open.spotify.com/album/71O60S5gIJSIAhdnrDIh3N",
+        "video": "https://open.spotify.com/embed/album/71O60S5gIJSIAhdnrDIh3N?utm_source=generator"
+
     }]
     }
